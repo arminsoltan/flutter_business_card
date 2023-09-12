@@ -3,7 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  runApp(MyWidget());
+  runApp(MaterialApp(
+      title: 'Business Card',
+      home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Business Card'),
+          ),
+          body: MyWidget())));
 }
 
 class MyWidget extends StatelessWidget {
@@ -16,7 +22,7 @@ class MyWidget extends StatelessWidget {
         Row(
           children: [
             const Padding(padding: EdgeInsets.all(8.0),
-            child: Icon(Icons.account_circle, size: 50),
+            child: Icon(Icons.account_circle, size: 150),
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,10 +37,10 @@ class MyWidget extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 8),
-        Row(
+        const SizedBox(height: 300),
+        const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
+          children: [
             Text(
               "132 prospect Street",
             ),
@@ -43,10 +49,10 @@ class MyWidget extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 59),
-        Row(
+        const SizedBox(height: 300),
+        const Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: const [
+          children: [
             Icon(Icons.accessibility),
             Icon(Icons.timer),
             Icon(Icons.phone_android),
